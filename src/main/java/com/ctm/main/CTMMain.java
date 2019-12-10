@@ -1,6 +1,5 @@
 package com.ctm.main;
 
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -8,7 +7,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 
-import com.ctm.bean.CTM;
 import com.ctm.bean.ConferenceTrack;
 
 public class CTMMain {
@@ -24,7 +22,6 @@ public class CTMMain {
 	//Get all the tracks and put it into map using their time.
 
 	public static void main(String[] args) {
-		List<ConferenceTrack> ctmList = new ArrayList<>();
 		String[] str = getTracks();
 		int total =0;
 		for(String st:str) {
@@ -133,106 +130,7 @@ public class CTMMain {
 		String[] tracks = str.split("\n");
 		return tracks;
 	}
-	
-	private static List<ConferenceTrack> getList() {
-		List<ConferenceTrack> list = new ArrayList<>();
-		ConferenceTrack ct1 = new ConferenceTrack();
-		ct1.setAuthor("Writing Fast Tests Against Enterprise Rails");
-		ct1.setDuration(60);
-		ct1.setId(1);
-		ct1.setName("python");
-		ConferenceTrack ct2 = new ConferenceTrack();
-		ct1.setAuthor("rk");
-		ct1.setDuration(45);
-		ct1.setId(2);
-		ct1.setName("45 python");
-		ConferenceTrack ct3 = new ConferenceTrack();
-		ct1.setAuthor("rk");
-		ct1.setDuration(30);
-		ct1.setId(3);
-		ct1.setName("lua");
-		ConferenceTrack ct4 = new ConferenceTrack();
-		ct1.setAuthor("rk");
-		ct1.setDuration(45);
-		ct1.setId(4);
-		ct1.setName("ruby errors");
-		ConferenceTrack ct5 = new ConferenceTrack();
-		ct1.setAuthor("rk");
-		ct1.setDuration(45);
-		ct1.setId(5);
-		ct1.setName("common ruby errors");
-		ConferenceTrack ct6 = new ConferenceTrack();
-		ct1.setAuthor("rk");
-		ct1.setDuration(60);
-		ct1.setId(6);
-		ct1.setName("rails for python");
-		ConferenceTrack ct7 = new ConferenceTrack();
-		ct7.setAuthor("rk");
-		ct7.setDuration(60);
-		ct7.setId(7);
-		ct7.setName("Communicating");
-		ConferenceTrack ct8 = new ConferenceTrack();
-		ct8.setAuthor("rk");
-		ct8.setDuration(30);
-		ct8.setId(7);
-		ct8.setName("Woah");
-		ConferenceTrack ct9 = new ConferenceTrack();
-		ct9.setAuthor("rk");
-		ct9.setDuration(45);
-		ct9.setId(9);
-		ct9.setName("Accounting-Driven Development");
-		ConferenceTrack ct10 = new ConferenceTrack();
-		ct10.setAuthor("rk");
-		ct10.setDuration(30);
-		ct10.setId(7);
-		ct10.setName("Sit Down and Write");
-		ConferenceTrack ct11 = new ConferenceTrack();
-		ct11.setDuration(45);
-		ct11.setName("Pair Programming vs Noise");
-		ConferenceTrack ct12 = new ConferenceTrack();
-		ct12.setDuration(60);
-		ct12.setName("Rails Magic");
-		ConferenceTrack ct13 = new ConferenceTrack();
-		ct13.setDuration(60);
-		ct13.setName("Ruby on Rails: Why We Should Move On");
-//		ConferenceTrack ct13 = new ConferenceTrack();
-//		ct13.setDuration(60);
-//		ct13.setName("Ruby on Rails: Why We Should Move On");
-//		ConferenceTrack ct7 = new ConferenceTrack();
-//		ct7.setAuthor("rk");
-//		ct7.setDuration(60);
-//		ct7.setId(7);
-//		ct7.setName("Communicating");
-//		ConferenceTrack ct7 = new ConferenceTrack();
-//		ct7.setAuthor("rk");
-//		ct7.setDuration(60);
-//		ct7.setId(7);
-//		ct7.setName("Communicating");
-//		ConferenceTrack ct7 = new ConferenceTrack();
-//		ct7.setAuthor("rk");
-//		ct7.setDuration(60);
-//		ct7.setId(7);
-//		ct7.setName("Communicating");
-//		ConferenceTrack ct7 = new ConferenceTrack();
-//		ct7.setAuthor("rk");
-//		ct7.setDuration(60);
-//		ct7.setId(7);
-//		ct7.setName("Communicating");
-//		ConferenceTrack ct7 = new ConferenceTrack();
-//		ct7.setAuthor("rk");
-//		ct7.setDuration(60);
-//		ct7.setId(7);
-//		ct7.setName("Communicating");
-		list.add(ct1);
-		return list;
-	}
-	
-	
-	private static void addEvent() throws ParseException {
-		CTM ctm = new CTM();
-		ctm.setCTId(1);
-		ctm.setStartTime(dt.parse("2019-12-01 09:00:20"));
-	}
+
 	
 	//Get event add to CTM with prev & next
 	//Check the date & time if it is morning or after.
